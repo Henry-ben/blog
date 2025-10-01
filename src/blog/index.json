@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "title": "Sample .md file",
+        "date": "2016-03-08",
+        "summary": "Example of a markdown file with code blocks and syntax highlighting",
+        "tags": ["markdown", "code", "example"],
+        "content": "```python\nimport numpy as np\nimport pandas as pd\n\ndef hello_world():\n    print('Hello, world!')\n```\n\nThis is a sample markdown file with a code block in Python."
+    },
+    {
+        "id": 2,
+        "title": "Deriving the OLS Estimator",
+        "date": "2020-12-21",
+        "summary": "How to derive the OLS Estimator with matrix notation and a tour of math typesetting using markdown with the help of KaTeX.",
+        "tags": ["math", "statistics", "markdown"],
+        "content": "The **Ordinary Least Squares (OLS) estimator** is a fundamental concept in statistics and econometrics. It is used to estimate the parameters of a linear regression model. The main goal of OLS is to minimize the sum of the squared differences between the observed values and the values predicted by the linear model.\n\n---\n\n### Linear Regression Model in Matrix Form\n\n$$\nY = X\\beta + \\epsilon\n$$\n\nWhere:\n- $Y$ is the vector of observed dependent variable values.\n- $X$ is the matrix of independent variables (including a column for the intercept).\n- $\\beta$ is the vector of coefficients to be estimated.\n- $\\epsilon$ is the vector of error terms.\n\n---\n\n### Deriving the Estimator\nThe OLS estimator $\\hat{\\beta}$ is obtained by minimizing the **residual sum of squares (RSS):**\n\n$$\nRSS = (Y - X\\beta)^T(Y - X\\beta)\n$$\n\nTake the derivative of $RSS$ with respect to $\\beta$ and set it equal to zero:\n\n$$\n\\frac{d(RSS)}{d\\beta} = -2X^T(Y - X\\beta) = 0\n$$\n\nSimplifying:\n\n$$\nX^TY = X^TX\\hat{\\beta}\n$$\n\nAssuming $X^TX$ is invertible, solve for $\\hat{\\beta}$:\n\n$$\n\\hat{\\beta} = (X^TX)^{-1}X^TY\n$$\n\n---\n\n### Interpretation\nThis formula shows that the estimated coefficients are determined by both the independent variables ($X$) and the observed dependent variable values ($Y$). The OLS estimator provides the **best linear unbiased estimate (BLUE)** of the coefficients under the classical regression assumptions."
+    },
+    {
+        "id": 3,
+        "title": "Understanding React Components",
+        "date": "2021-05-15",
+        "summary": "A deep dive into React components, their lifecycle, and best practices for building reusable UI elements.",
+        "tags": ["react", "javascript", "web development"],
+        "content": "React components are the building blocks of any React application. They allow you to split the UI into independent, reusable pieces that can be managed separately. There are two main types of components in React: functional components and class components.\n\n1. **Functional Components**: These are simple JavaScript functions that return JSX. They are easier to read and test, and with the introduction of hooks, they can now manage state and side effects.\n\n```javascript\nfunction Greeting(props) {\n  return <h1>Hello, {props.name}!</h1>;\n}\n```\n\n2. **Class Components**: These are ES6 classes that extend from `React.Component`. They have a render method that returns JSX and can manage their own state and lifecycle methods.\n\n```javascript\nclass Greeting extends React.Component {\n  render() {\n    return <h1>Hello, {this.props.name}!</h1>;\n  }\n}\n```\n\n3. **Lifecycle Methods**: Class components have several lifecycle methods like `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount` that allow you to run code at specific points in a component's life.\n\n4. **Best Practices**:\n   - Keep components small and focused on a single task.\n   - Use props to pass data and callbacks to child components.\n   - Use state sparingly and lift it up when necessary.\n   - Utilize hooks in functional components for state management and side effects.\n\nBy understanding these concepts, you can create efficient and maintainable React applications."
+    },
+    {
+        "id": 4,
+        "title": "Getting Started with Node.js",
+        "date": "2021-06-10",
+        "summary": "An introduction to Node.js, including setup, basic concepts, and building your first server-side application.",
+        "tags": ["node.js", "javascript", "backend"],
+        "content": "Node.js is a powerful JavaScript runtime built on Chrome's V8 engine that allows developers to run JavaScript on the server side. To get started with Node.js, follow these steps:\n\n1. **Install Node.js**: Download and install Node.js from the official website (https://nodejs.org/). This will also install npm (Node Package Manager), which is essential for managing packages.\n\n2. **Set Up a Project**: Create a new directory for your project and navigate into it using the terminal. Run `npm init` to create a `package.json` file that will hold your project's metadata and dependencies.\n\n3. **Create a Simple Server**: Create a new file named `server.js` and add the following code to set up a basic HTTP server:\n\n```javascript\nconst http = require('http');\n\nconst hostname = "
+
+    },
+    {
+        "id": 5,
+        "title": "CSS Flexbox Guide",
+        "date": "2021-07-22",
+        "summary": "A comprehensive guide to CSS Flexbox, including layout techniques and practical examples.",
+        "tags": ["css", "flexbox", "web design"],
+        "content": "CSS Flexbox is a powerful layout module that allows for flexible and efficient arrangement of items within a container. It is particularly useful for creating responsive designs. Here are some key concepts and properties of Flexbox:\n\n1. **Container Properties**:\n   - `display: flex;`: Defines a flex container.\n   - `flex-direction`: Specifies the direction of the flex items (row, column, row-reverse, column-reverse).\n   - `justify-content`: Aligns items along the main axis (flex-start, flex-end, center, space-between, space-around).\n   - `align-items`: Aligns items along the cross axis (flex-start, flex-end, center, stretch).\n\n2. **Item Properties**:\n   - `flex-grow`: Defines how much a flex item will grow relative to the rest.\n   - `flex-shrink`: Defines how much a flex item will shrink relative to the rest.\n   - `flex-basis`: Sets the initial main size of a flex item.\n   - `align-self`: Allows individual items to override the container's align-items property.\n\nBy mastering these properties, you can create complex layouts with ease and ensure your designs are adaptable to different screen sizes."
+    },
+    {
+        "id": 6,
+        "title": "Understanding Asynchronous JavaScript",
+        "date": "2021-08-30",
+        "summary": "Exploring the concepts of asynchronous programming in JavaScript, including callbacks, promises, and async/await.",
+        "tags": ["javascript", "asynchronous", "programming"],
+        "content": "JavaScript is single-threaded, which means it can only execute one task at a time. However, many operations in modern applications, such as fetching data from an API or reading files, take time. To avoid blocking the entire program while waiting, JavaScript uses asynchronous programming.\n\nThe three main ways of handling asynchronous tasks are:\n\n1. **Callbacks**: A function passed into another function to be executed later. While useful, they often lead to 'callback hell' when deeply nested.\n\n2. **Promises**: Introduced to make asynchronous code easier to manage. Promises represent a value that may be available now, later, or never. They use `.then()` and `.catch()` for handling results or errors.\n\n3. **Async/Await**: A modern syntax built on top of promises that allows developers to write asynchronous code that looks synchronous. This makes code cleaner, more readable, and easier to debug.\n\nUnderstanding how these techniques work is essential for building responsive applications, especially when working with APIs, databases, or any task that requires waiting for results."
+    },
+    {
+        "id": 7,
+        "title": "Building RESTful APIs with Express",
+        "date": "2021-09-15",
+        "summary": "Learn how to build RESTful APIs using Express.js, including routing, middleware, and error handling.",
+        "tags": ["express", "node.js", "api"],
+        "content": "Express.js is a minimal and flexible Node.js web application framework that provides robust features for building web and mobile applications. In this article, we will learn how to create a RESTful API using Express. We'll cover setting up routes, using middleware, and handling errors gracefully. By the end, you'll be able to build your own APIs for real-world applications."
+    }
+]
